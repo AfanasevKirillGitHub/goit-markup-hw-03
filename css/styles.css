@@ -25,6 +25,9 @@
    padding: 0;
    margin: 0;
  }
+ img {
+   display: block;
+ }
 .container {
    width: 1200px;
    margin-left: auto;
@@ -107,6 +110,9 @@
 
 /* Hero */
  .hero {
+   padding-top: 200px;
+   padding-bottom: 200px;
+
    background-color: var(--bgc-color);
    text-align: center;
 }
@@ -160,8 +166,18 @@
 }
 .features-title,
 .portfolio-title {
- visibility: hidden;
-}
+   visibility: hidden;
+   position: absolute;
+   white-space: nowrap;
+   width: 1px;
+   height: 1px;
+   overflow: hidden;
+   border: 0;
+   padding: 0;
+   clip: rect(0 0 0 0);
+   clip-path: inset(50%);
+   margin: -1px;
+   }
 .features-subtitle {
    margin-bottom: 10px;
    font-size: 14px;
@@ -281,28 +297,24 @@
 
 
 /* Портфолио */
-.card-work {
-   box-sizing: border-box;
-   width: 370px;
-   background: var(--basic-white);
-   border: 1px solid #EEEEEE;
+
+.portfolio-wrapper{
+   padding: 20px 24px; 
+   border: 1px solid #eeeeee;
+   border-top: none;
 }
 .portfolio-subtitle {
-   width: 322px;
-   margin-top: 20px;
    margin-bottom: 4px;
-   margin-left: 24px;
-   margin-right: 24px;
-
+   
    font-size: 18px;
    line-height: 2;
    letter-spacing: 0.06em;
    color: var(--title-text-color);
 }
 .portfolio-text {
-   margin-left: 24px;
+   /* margin-left: 24px;
    margin-right: 24px;
-   margin-bottom: 20px;
+   margin-bottom: 20px; */
 
    font-size: 16px;
    line-height: 1.87;
